@@ -16,8 +16,8 @@
 |column|other|
 |text       |:text|
 |image      |:string|
-|user       |:references|
-|chatgroups |:references|
+|user       |:references, foreign_key: true|
+|chatgroup  |:references, foreign_key: true|
 
 #message.rb
 |belongs_to |:user|
@@ -26,8 +26,8 @@
 
 ##TABLE chatgroup_users
 |column|other|
-|user_id  |:integer|
-|group_id |:integer|
+|user      |:references, foreign_key: true|
+|chatgroup |:references, foreign_key: truer|
 
 #chatgroup_user.rb
 |belongs_to |:user|

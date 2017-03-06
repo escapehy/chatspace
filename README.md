@@ -27,7 +27,7 @@
 ##TABLE chatgroup_users
 |column|other|
 |user      |:references, foreign_key: true|
-|chatgroup |:references, foreign_key: truer|
+|chatgroup |:references, foreign_key: true|
 
 #chatgroup_user.rb
 |belongs_to |:user|

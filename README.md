@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## TABLE users
+|column|other|
+|email    |:string, null: false, :unique: true|
+|password |:string, null: false|
+|nickname |:string, null: false|
 
-Things you may want to cover:
+# user.rb
+|has_many |:messages|
+|has_many |:chatgroups through: :chatgroup_users|
+|has_many |:chatgroup_users|
+-----
 
-* Ruby version
+##TABLE messages
+|column|other|
+|text       |:text|
+|image      |:string|
+|user       |:references, foreign_key: true|
+|chatgroup  |:references, foreign_key: true|
 
-* System dependencies
+#message.rb
+|belongs_to |:user|
+|belongs_to |:chatgroup|
+-----
 
-* Configuration
+##TABLE chatgroup_users
+|column|other|
+|user      |:references, foreign_key: true|
+|chatgroup |:references, foreign_key: truer|
 
-* Database creation
+#chatgroup_user.rb
+|belongs_to |:user|
+|belongs_to |:chatgroup|
+------
 
-* Database initialization
+##TABLE chatgroups
+|column|other|
+|name |:string, null: false|
 
-* How to run the test suite
+#chatgroup.rb
+|has_many |:users through: :chatgroup_users|
+|has_many |:chatgroup_users|
+|has_many |:messages|
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

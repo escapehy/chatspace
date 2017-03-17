@@ -1,0 +1,59 @@
+.chat
+  .chat-side
+    .chat-user
+      .chat-user__name hirokiyoshida
+      .chat-user__icon
+        .fa.fa-pencil-square-o.fa-lg
+        .fa.fa-cog.fa-lg
+    .chat-groups
+      .chat-group
+        .chat-group_name hy_group01
+        .chat-group_message no message
+      .chat-group
+        .chat-group_name hy_group02
+        .chat-group_message no message
+      .chat-group
+        .chat-group_name hy_group03
+        .chat-group_message no message
+
+  .chat-main
+    .chat-header
+      .chat-header__left
+        %h2 groups
+        %p.chat-header__users
+          member
+          %span.chat-header__user hy
+      .chat-header__right
+        %a.chat-header__edit-btn{:href => ""}EDIT
+
+    .chat-body
+      %ul.chat-messages
+        %li.chat-message
+          .chat-message__header
+            .chat-message__name hy1
+            .chat-message__time 2017/01/01
+          .chat-message__body hi
+        %li.chat-message
+          .chat-message__header
+            .chat-message__name hy2
+            .chat-message__time 2017/01/01
+          .chat-message__body hi
+        %li.chat-message
+          .chat-message__header
+            .chat-message__name hy2
+            .chat-message__time 2017/01/01
+          .chat-message__body hi
+        %li.chat-message
+          .chat-message__header
+            .chat-message__name hy2
+            .chat-message__time 2017/01/01
+          .chat-message__body hi
+
+    .chat-footer
+      .chat-footer__body
+        %textarea#message_body{name: 'message[body]', placeholder: 'type a message'}
+        %label.chat-footer__body__file
+          %input#message_image{name: 'message[image]', type: 'file'}
+          %i.fa.fa-image
+      %input.submit_btn{type: 'submit', value: 'SEND'}
+

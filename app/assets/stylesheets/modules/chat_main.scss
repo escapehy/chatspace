@@ -1,0 +1,141 @@
+.chat {
+  height: 100%;
+  min-width: 980px;
+}
+
+
+.chat-main {
+  height: 100%;
+  width: calc(100% - 300px);
+  float: left;
+  position: relateive;
+}
+
+.chat-header {
+  padding: 0 40px;
+  border-bottom: 1px #eee solid;
+  @include clearfix;
+  &__left {
+    float: left;
+    h2 {
+      color: #333;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 20px;
+      line-height: 50px;
+    }
+  }
+  &__right {
+    float: right;
+  }
+  &__user {
+    margin-left: 5px;
+  }
+  &__users {
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &__edit-btn {
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0px 20px;
+    border: #38aef0 2px solid;
+    color: #38aef0;
+    font-size: 14px;
+  }
+}
+
+.chat-body {
+  height: calc(100% - 200px);
+  width: 100%;
+  padding: 30px 40px;
+  overfloew-y: scroll;
+}
+
+.chat-messages {
+  margin: 16px 0;
+}
+
+.chat-message {
+  margin-bottom: 40px;
+  &__header {
+    @include clearfix;
+    line-height: 20px;
+  }
+  &__name {
+    color: 434A54;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    margin-bottom: 10px;
+  }
+  &__time {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+    float: left;
+  }
+  &__body {
+    color: 434A54;
+    font-size: 14px;
+  }
+}
+
+.chat-footer {
+  background: #ddd;
+  position: absolute;
+  padding: 20px 40px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &__body {
+    width: calc(100% - 115px);
+    position: relative;
+    float: left;
+    display: block;
+
+    textarea {
+      height: 20px;
+      width: 100%;
+      padding: 15px 0;
+      resize: none;
+      border: none;
+      display: block;
+      line-height: 20px;
+    }
+
+    &__file {
+      top: 0;
+      right: 0;
+      padding: 15px 0;
+      height: 20px;
+      width: 40px;
+      position: absolute;
+      text-align: center;
+      display: block;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+      .fa.fa-image {
+        display:inline-block;
+      }
+    }
+  }
+
+  .submit_btn {
+    float: left;
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+    text-align: center;
+    background: #38aef0;
+    color: white;
+    line-height: 50px;
+    margin-left: 15px;
+    border: none;
+  }
+}
